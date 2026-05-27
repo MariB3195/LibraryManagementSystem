@@ -13,7 +13,8 @@ public class Main {
             System.out.println("\n=== LIBRARY MENU ===");
             System.out.println("1. Aggiungi libro");
             System.out.println("2. Mostra libri");
-            System.out.println("3. Esci");
+            System.out.println("3. Cerca libro");
+            System.out.println("4. Esci");
 
             choice = scanner.nextInt();
             scanner.nextLine();
