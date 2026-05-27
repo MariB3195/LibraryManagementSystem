@@ -80,3 +80,24 @@ public void returnBook(String title) {
 
     System.out.println("Libro non trovato.");
 }
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public void saveBooksToFile() {
+
+    try (BufferedWriter writer =
+                 new BufferedWriter(new FileWriter("books.txt"))) {
+
+        for (Book book : books) {
+            writer.write(book.toString());
+            writer.newLine();
+        }
+
+        System.out.println("Libri salvati su file.");
+
+    } catch (IOException e) {
+        System.out.println("Errore durante il salvataggio.");
+    }
+}
