@@ -37,7 +37,15 @@ public class Main {
                     library.showBooks();
                     break;
 
-                case 3:
+                    case 3:
+
+                    System.out.print("Inserisci titolo: ");
+                    String searchTitle = scanner.nextLine();
+
+                    library.searchBook(searchTitle);
+                    break;
+
+                case 4:
                     System.out.println("Uscita...");
                     break;
 
