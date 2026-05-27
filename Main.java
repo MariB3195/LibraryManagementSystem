@@ -57,6 +57,8 @@ public class Main {
 
         } while (choice != 3);
 
+library.saveBooksToFile();
+        
         scanner.close();
     }
 }
