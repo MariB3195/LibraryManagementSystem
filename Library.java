@@ -23,3 +23,20 @@ public class Library {
         }
     }
 }
+
+public void searchBook(String title) {
+
+    boolean found = false;
+
+    for (Book book : books) {
+
+        if (book.getTitle().equalsIgnoreCase(title)) {
+            System.out.println(book);
+            found = true;
+        }
+    }
+
+    if (!found) {
+        System.out.println("Libro non trovato.");
+    }
+}
