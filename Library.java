@@ -40,3 +40,23 @@ public void searchBook(String title) {
         System.out.println("Libro non trovato.");
     }
 }
+
+public void borrowBook(String title) {
+
+    for (Book book : books) {
+
+        if (book.getTitle().equalsIgnoreCase(title)) {
+
+            if (book.isAvailable()) {
+                book.borrowBook();
+                System.out.println("Libro prestato con successo.");
+            } else {
+                System.out.println("Libro già prestato.");
+            }
+
+            return;
+        }
+    }
+
+    System.out.println("Libro non trovato.");
+}
