@@ -60,3 +60,23 @@ public void borrowBook(String title) {
 
     System.out.println("Libro non trovato.");
 }
+
+public void returnBook(String title) {
+
+    for (Book book : books) {
+
+        if (book.getTitle().equalsIgnoreCase(title)) {
+
+            if (!book.isAvailable()) {
+                book.returnBook();
+                System.out.println("Libro restituito.");
+            } else {
+                System.out.println("Il libro era già disponibile.");
+            }
+
+            return;
+        }
+    }
+
+    System.out.println("Libro non trovato.");
+}
